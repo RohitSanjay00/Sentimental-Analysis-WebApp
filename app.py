@@ -7,7 +7,7 @@ import numpy as np
 
 loaded_model = tf.keras.models.load_model("Sentiment_model_1")
 app = Flask(__name__, template_folder='templates')
-cred = credentials.Certificate("sentimentclassification-113de-firebase-adminsdk-iv3fo-f1aab7aa58.json")  
+cred = credentials.Certificate("")  
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
