@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Classification Project</div>
+        <form id="submitForm" method="post">
+            <input class="input-box" type="text" name="complaint" placeholder="Please input your complaint here">
+            <br>
+            <button class="submit-button" type="submit" name="model" value="bert">Submit With Bert Model</button>
+            <button class="submit-button" type="submit" name="model" value="rohit">Submit with Rohit's Model</button>
+        </form>
+        <br>     
+        <button class="view-queue-button" onclick="window.location.href='/queue'">View Queue</button>
+    </div>
+</body>
+</html>

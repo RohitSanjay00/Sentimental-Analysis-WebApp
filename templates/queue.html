@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Queue</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint Queue</h1>
+        <div class="box positive">
+            <h2>Positive Sentiment</h2>
+            <ul>
+                {% for complaint in positive %}
+                <li>{{ complaint.text }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="box negative">
+            <h2>Negative Sentiment</h2>
+            <ul>
+                {% for complaint in negative %}
+                <li>{{ complaint.text }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="box neutral">
+            <h2>Neutral Sentiment</h2>
+            <ul>
+                {% for complaint in neutral %}
+                <li>{{ complaint.text }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
